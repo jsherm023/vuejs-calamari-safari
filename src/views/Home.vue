@@ -27,7 +27,7 @@ var axios = require('axios');
 export default {
   data: function() {
     return {
-      message: "Welcome to Vue.js!",
+      message: "Lets Start Your Safari!",
       restaurants: [],
     };
   },
