@@ -7,10 +7,10 @@
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Name: {{ restaurant.name }}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Description: {{ restaurant.description }}</h6>
-              <p class="card-text">State Id: {{ restaurant.state_id }}</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h6 class="card-subtitle mb-2 text-muted">Address: {{ restaurant.address }}</h6>
+              <p class="card-text">City: {{ restaurant.city }}</p>
+              <p class="card-text">State: {{ restaurant.state }}</p>
+              <img v-bind:src="restaurant.image_url" width="100px">
             </div>
           </div>
         </div>
