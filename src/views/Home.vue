@@ -10,7 +10,7 @@
               <h6 class="card-subtitle mb-2 text-muted">Address: {{ restaurant.address }}</h6>
               <p class="card-text">City: {{ restaurant.city }}</p>
               <p class="card-text">State: {{ restaurant.state }}</p>
-              <img v-bind:src="restaurant.image_url" width="100px">
+              <img v-bind:src="restaurant.image_url" width="200px">
             </div>
           </div>
         </div>
