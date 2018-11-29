@@ -31,10 +31,10 @@ export default {
   },
   created: function() {
     console.log(this);
-    axios.get('http://localhost:3000/api/restaurants/' + this.$route.params.id).then(function(response) {
+    axios.get('http://localhost:3000/api/restaurants/' + this.$route.params.id).then(response => {
       console.log(response.data);
       this.restaurant = response.data;
-      }.bind(this))
+      });
   },
   methods: {},
   computed: {}

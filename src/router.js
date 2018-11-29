@@ -30,7 +30,8 @@ export default new Router({
 
     { path: "/restaurants/:id", 
     name: "restaurantsShow", 
-    component: RestaurantsShow },
+    component: RestaurantsShow 
+  },
 
     {
       path: '/about',
