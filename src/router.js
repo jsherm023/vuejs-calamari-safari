@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
+import RestaurantsShow from './views/RestaurantsShow.vue'
 
 Vue.use(Router)
 
@@ -26,6 +27,10 @@ export default new Router({
     { path: "/logout", 
     name: "logout", 
     component: Logout },
+
+    { path: "/restaurants/:id", 
+    name: "restaurantsShow", 
+    component: RestaurantsShow },
 
     {
       path: '/about',
