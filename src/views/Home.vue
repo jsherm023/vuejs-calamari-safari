@@ -13,11 +13,11 @@
       <div>
         <button @click="setSortAttribute('city')">Sort by city</button>
         <button @click="setSortAttribute('state')">Sort by state</button>
-        <button @click="setSortAttribute('name')">Sort by name</button>
+        <button @click="setSortAttribute('price')">Sort by price</button>
       </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4" v-for="restaurant in orderBy(restaurants, sortAttribute, sortAscending)">
+        <div class="col-sm-4" v-for="restaurant in orderBy(restaurants, sortAttribute, sortAscending)" :key="restaurant.id">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Name: {{ restaurant.name }}</h5>
@@ -26,6 +26,7 @@
               <p class="card-text">City: {{ restaurant.city }}</p>
               <p class="card-text">State: {{ restaurant.state }}</p>
               <p class="card-text">Zip Code: {{ restaurant.postal_code }}</p>
+              <p class="card-text">Price: {{ restaurant.price }}</p>
               <img v-bind:src="restaurant.image_url" width="200px"></img>
               <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn btn-info">View Restaurant</a>
             </div>
