@@ -1,10 +1,18 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-      Search by name: <input v-model="nameFilter">
+      Search by name: <input v-model="nameFilter" list="names">
+      <datalist id="names">
+        <span v-for="restaurant in restaurants">
+          <option>{{ restaurant.city }}</option>
+          <option>{{ restaurant.state }}</option>
+          <option>{{ restaurant.postal_code }}</option>
+          <option>{{ restaurant.name }}</option>
+        </span>
+      </datalist>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4" v-for="restaurant in filterBy(restaurants, nameFilter, 'name')">
+        <div class="col-sm-4" v-for="restaurant in filterBy(restaurants, nameFilter)">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Name: {{ restaurant.name }}</h5>
