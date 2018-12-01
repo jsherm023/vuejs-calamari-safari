@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-      Search by name: <input v-model="nameFilter" list="names">
+      Search Your Destination: <input v-model="nameFilter" list="names">
       <datalist id="names">
         <span v-for="restaurant in restaurants">
           <option>{{ restaurant.city }}</option>
@@ -10,9 +10,14 @@
           <option>{{ restaurant.name }}</option>
         </span>
       </datalist>
+      <div>
+        <button @click="setSortAttribute('city')">Sort by city</button>
+        <button @click="setSortAttribute('state')">Sort by state</button>
+        <button @click="setSortAttribute('name')">Sort by name</button>
+      </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4" v-for="restaurant in filterBy(restaurants, nameFilter)">
+        <div class="col-sm-4" v-for="restaurant in orderBy(filterBy(restaurants, nameFilter, 'name', 'city', 'state'), sortAttribute)">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Name: {{ restaurant.name }}</h5>
@@ -45,7 +50,8 @@ export default {
       restaurants: [],
       currentRestaurant: {name: ""},
       errors: [],
-      nameFilter: ''
+      nameFilter: '',
+      sortAttribute: 'name'
     };
   },
   created: function() {
@@ -55,7 +61,10 @@ export default {
       }.bind(this))
   },
   methods: {
-    },
+    setSortAttribute: function(inputAttribute) {
+      this.sortAttribute = inputAttribute;
+    }
+  },
   
   computed: {}
 };
