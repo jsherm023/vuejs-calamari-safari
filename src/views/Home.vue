@@ -17,7 +17,7 @@
       </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4" v-for="restaurant in orderBy(restaurants, sortAttribute, sortAscending)" :key="restaurant.id">
+        <div class="col-sm-4" v-for="restaurant in orderBy(filterBy(restaurants, nameFilter), sortAttribute, sortAscending)">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Name: {{ restaurant.name }}</h5>
