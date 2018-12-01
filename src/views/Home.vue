@@ -17,7 +17,7 @@
       </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4" v-for="restaurant in orderBy(filterBy(restaurants, nameFilter, 'name', 'city', 'state'), sortAttribute)">
+        <div class="col-sm-4" v-for="restaurant in orderBy(restaurants, sortAttribute, sortAscending)">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Name: {{ restaurant.name }}</h5>
@@ -51,7 +51,8 @@ export default {
       currentRestaurant: {name: ""},
       errors: [],
       nameFilter: '',
-      sortAttribute: 'name'
+      sortAttribute: 'name', 
+      sortAscending: 1
     };
   },
   created: function() {
@@ -62,7 +63,11 @@ export default {
   },
   methods: {
     setSortAttribute: function(inputAttribute) {
+      if (this.sortAttribute === inputAttribute) {
+        this.sortAscending *= -1;
+      } else {
       this.sortAttribute = inputAttribute;
+      }
     }
   },
   
