@@ -11,7 +11,8 @@
                             <div class="sidebar clearfix m-b-20">
                                 <div class="main-block">
                                     <div class="sidebar-title white-txt">
-                                        <h6>Choose Cusine</h6> <i class="fa fa-cutlery pull-right"></i> </div>
+                                        <h6>Choose Cusine</h6> <i class="fa fa-cutlery pull-right"></i> 
+                                      </div>
                                     <div class="input-group">
                                         <input type="text" class="form-control search-field" placeholder="Search your favorite food"> <span class="input-group-btn"> 
                                  <button class="btn btn-secondary search-btn" type="button"><i class="fa fa-search"></i></button> 
@@ -43,18 +44,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <!-- end:Sidebar nav -->
-                                <div class="widget-delivery">
-                                    <form>
-                                        <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6">
-                                            <label class="custom-control custom-radio">
-                                                <input id="radio1" name="radio" type="radio" class="custom-control-input" checked=""> <span class="custom-control-indicator"></span> <span class="custom-control-description">Delivery</span> </label>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6">
-                                            <label class="custom-control custom-radio">
-                                                <input id="radio2" name="radio" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Takeout</span> </label>
-                                        </div>
-                                    </form>
-                                </div>
+                                
                             </div>
                             <div class="widget clearfix">
                                 <!-- /widget heading -->
@@ -113,9 +103,11 @@
                                         </div>
                                         <!-- end:Logo -->
                                         <div class="entry-dscr">
-                                            <h5><a href="#">{{ restaurant.name}}</a></h5> <span>{{ restaurant.cuisine }} <a href="#">...</a></span>
+                                            <h5><a href="#">{{ restaurant.name}}</a></h5> 
+                                            <h6><a href="#">{{ restaurant.city}}</a></h6>
+                                            <span>{{ restaurant.cuisine }} <a href="#">...</a></span>
                                             <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i>Price:{{ restaurant.price }}</li>
+                                                <li class="list-inline-item"><i class="fa fa-check"></i>$${{ restaurant.price }}</li>
                                                 
                                             </ul>
                                         </div>
@@ -124,8 +116,9 @@
                                     <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
                                         <div class="right-content bg-white">
                                             <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
+                                                
+                                                <a v-bind:href="restaurant.url" class="btn theme-btn-dash">View on Zomato</a> <a v-bind:href="restaurant.menu_url" class="btn theme-btn-dash">View Menu</a>
+                                                <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn theme-btn-dash">View Restaurant</a> </div>
                                         </div>
                                         <!-- end:right info -->
                                     </div>

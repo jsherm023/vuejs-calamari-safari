@@ -1,30 +1,37 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
-    <div class="container">
-      <div class="row">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Name: {{ restaurant.name }}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Address: {{ restaurant.address }}</h6>
-              <p class="card-title">Cuisine: {{ restaurant.cuisine }}</p>
-              <p class="card-text">Area: {{ restaurant.area }}</p>
-              <p class="card-text">City: {{ restaurant.city }}</p>
-              <p class="card-text">Zip Code: {{ restaurant.postal_code }}</p>
-              <p class="card-text">Price: {{ restaurant.price }}</p>
-              <img v-bind:src="restaurant.image_url" width="200px">
-              <p class="red" v-for="error in errors">{{error}}</p>
-              <div>
-                <a v-bind:href="restaurant.url" class="btn btn-info btn-sm">View on Zomato</a>
-              </div>
-              <div>
-              <a v-bind:href="restaurant.menu_url" class="btn btn-info btn-sm">View Menu</a>
-            </div>
-              <button v-on:click="addMustVisit()">Mark as a must visit</button>
-            </div>
-          </div>
-      </div>
-    </div>
+    <section class="inner-page-hero bg-image" data-image-src="https://choolaah.com/wp-content/uploads/2018/05/our-food-banner.jpg">
+                <div class="profile">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12  col-md-4 col-lg-4 profile-img">
+                                <div class="image-wrap">
+                                    <figure><img v-bind:src=" restaurant.image_url" alt="Profile Image"></figure>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
+                                <div class="pull-left right-text white-txt">
+                                    <h6><a href="#">{{ restaurant.name }}</a></h6> <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a>
+                                    <p>{{ restaurant.cuisine }}</p>
+                                    <ul class="nav nav-inline">
+                                        <li class="nav-item"> <a class="nav-link active" href="#"><i class="fa fa-check"></i>$${{ restaurant.price }}</a> </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-motorcycle"></i> 30 min</a> </li>
+                                        <li class="nav-item ratings">
+                                            <a class="nav-link" href="#"> <span>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    </span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
   </div>
 </template>
 
