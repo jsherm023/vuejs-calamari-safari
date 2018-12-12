@@ -5,7 +5,9 @@ import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
 import RestaurantsShow from './views/RestaurantsShow.vue'
+import RestaurantsIndex from './views/RestaurantsIndex.vue'
 import MustVisitsIndex from './views/MustVisitsIndex.vue'
+
 
 Vue.use(Router)
 
@@ -37,6 +39,10 @@ export default new Router({
     name: "restaurantsShow", 
     component: RestaurantsShow 
   },
+
+     { path: "/restaurants", 
+    name: "RestaurantsIndex", 
+    component: RestaurantsIndex },
 
     {
       path: '/about',
