@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="hero bg-image" data-image-src="http://placehold.it/1670x680">
+    <section class="hero bg-image" data-image-src="https://media-cdn.tripadvisor.com/media/photo-s/0e/7e/11/fe/our-beautiful-calamari.jpg">
             <div class="hero-inner">
                 <div class="container text-center hero-text font-white">
                     <h1>Lets start your safari! </h1>
@@ -12,7 +12,7 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="I would like to eat...."> </div>
                             </div>
-                            <button onclick="location.href='restaurants.html'" type="button" class="btn theme-btn btn-lg">Search</button>
+                            <button onclick="location.href='/#/restaurants'" type="button" class="btn theme-btn btn-lg">Search</button>
                         </form>
                     </div>
                     <div class="steps">
@@ -132,31 +132,6 @@
                 </div>
             </div>
         </section>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4" v-for="restaurant in orderBy(filterBy(restaurants, nameFilter), sortAttribute, sortAscending)">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Name: {{ restaurant.name }}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Address: {{ restaurant.address }}</h6>
-              <p class="card-title">Cuisine: {{ restaurant.cuisine }}</p>
-              <p class="card-text">Area: {{ restaurant.area }}</p>
-              <p class="card-text">City: {{ restaurant.city }}</p>
-              <p class="card-text">Zip Code: {{ restaurant.postal_code }}</p>
-              <p class="card-text">Price: {{ restaurant.price }}</p>
-              <img v-bind:src="restaurant.image_url" width="200px"></img>
-              <div>
-                <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn btn-info btn-sm">View Restaurant</a>
-              </div>
-              <div>
-                <a v-bind:href="restaurant.url" class="btn btn-info btn-sm">View on Zomato</a>
-              </div>
-              <a v-bind:href="restaurant.menu_url" class="btn btn-info btn-sm">View Menu</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
