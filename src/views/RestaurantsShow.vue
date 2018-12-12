@@ -7,12 +7,19 @@
             <div class="card-body">
               <h5 class="card-title">Name: {{ restaurant.name }}</h5>
               <h6 class="card-subtitle mb-2 text-muted">Address: {{ restaurant.address }}</h6>
+              <p class="card-title">Cuisine: {{ restaurant.cuisine }}</p>
+              <p class="card-text">Area: {{ restaurant.area }}</p>
               <p class="card-text">City: {{ restaurant.city }}</p>
-              <p class="card-text">State: {{ restaurant.state }}</p>
+              <p class="card-text">Zip Code: {{ restaurant.postal_code }}</p>
+              <p class="card-text">Price: {{ restaurant.price }}</p>
               <img v-bind:src="restaurant.image_url" width="200px">
-              <p> Make a reservation below</p>
-              <a v-bind:href="restaurant.reserve_url"> {{ restaurant.reserve_url }}</a>
               <p class="red" v-for="error in errors">{{error}}</p>
+              <div>
+                <a v-bind:href="restaurant.url" class="btn btn-info btn-sm">View on Zomato</a>
+              </div>
+              <div>
+              <a v-bind:href="restaurant.menu_url" class="btn btn-info btn-sm">View Menu</a>
+            </div>
               <button v-on:click="addMustVisit()">Mark as a must visit</button>
             </div>
           </div>
