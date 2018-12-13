@@ -1,9 +1,9 @@
 <template>
   <div class="login">
     <div class="inner-page-hero bg-image" data-image-src="https://www.africansafarihome.com/wp-content/uploads/2017/04/African-Safari-Costs.jpg">
-  <div class="container"> 
-  </div>
-                <!-- end:Container -->
+      <div class="container"> 
+      </div>
+      <!-- end:Container -->
     </div>
     <div class="container">
       <form v-on:submit.prevent="submit()">
@@ -26,28 +26,28 @@
 </template>
 
 <script>
-import axios from "axios";
+  import axios from "axios";
 
-export default {
-  template: "#login-page",
-  data: function() {
-    return {
-      email: "",
-      password: "",
-      errors: []
-    };
-  },
-  methods: {
-    submit: function() {
-      var params = {
-        email: this.email,
-        password: this.password
+  export default {
+    template: "#login-page",
+    data: function() {
+      return {
+        email: "",
+        password: "",
+        errors: []
       };
-      axios
+    },
+    methods: {
+      submit: function() {
+        var params = {
+          email: this.email,
+          password: this.password
+        };
+        axios
         .post("http://localhost:3000/api/sessions", params)
         .then(response => {
           axios.defaults.headers.common["Authorization"] =
-            "Bearer " + response.data.jwt;
+          "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
           this.$router.push("/");
         })
@@ -56,7 +56,7 @@ export default {
           this.email = "";
           this.password = "";
         });
+      }
     }
-  }
-};
+  };
 </script>
