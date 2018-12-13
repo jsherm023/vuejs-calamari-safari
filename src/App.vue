@@ -1,14 +1,14 @@
 <template>
-  <div id="app">
+  <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
     <header id="header" class="header-scroll top-header headrom">
             <!-- .navbar -->
-            <nav class="navbar navbar-light">
+            <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
                     <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"> <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active" href="#/">Home <span class="sr-only">(current)</span></a> </li>
                             <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Your Safari</a>
                                 <div class="dropdown-menu"> <a class="dropdown-item" href="/#/ratings">Must Visits</a> <a class="dropdown-item" href="map_results.html">Map results</a></div>
                             </li>
@@ -25,11 +25,7 @@
             </nav>
             <!-- /.navbar -->
         </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">      <a class="navbar-brand" href="#">Calamari Safari</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>    
-    </nav>
+    
     <router-view/>
     <footer class="footer">
             <div class="container">

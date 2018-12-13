@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="inner-page-hero bg-image" data-image-src="https://choolaah.com/wp-content/uploads/2018/05/our-food-banner.jpg">
+    <section class="inner-page-hero bg-image" data-image-src="https://png.pngtree.com/thumb_back/fw800/back_pic/04/43/72/645853706804660.jpg">
                 <div class="profile">
                     <div class="container">
                         <div class="row">
@@ -11,20 +11,14 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
                                 <div class="pull-left right-text white-txt">
-                                    <h6><a href="#">{{ restaurant.name }}</a></h6> <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a>
+                                    <h6><a href="#">{{ restaurant.name }}</a></h6> 
+                                    <h6><a href="#">{{ restaurant.city}}</a></h6>
+                                    <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a>                          
                                     <p>{{ restaurant.cuisine }}</p>
                                     <ul class="nav nav-inline">
-                                        <li class="nav-item"> <a class="nav-link active" href="#"><i class="fa fa-check"></i>$${{ restaurant.price }}</a> </li>
-                                        <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-motorcycle"></i> 30 min</a> </li>
-                                        <li class="nav-item ratings">
-                                            <a class="nav-link" href="#"> <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    </span> </a>
-                                        </li>
+                                        <li class="nav-item"> 
+                                          <a class="nav-link active" href="#"><i class="fa fa-check"></i>$${{ restaurant.price }}</a> 
+                                        </li>    
                                     </ul>
                                 </div>
                             </div>
@@ -32,7 +26,17 @@
                     </div>
                 </div>
             </section>
+             <div class="breadcrumb">
+                <div class="container">
+                    <ul>
+                        <li><a href="#/" class="active">Home</a></li>
+                        <li><a href="/#/restaurants">Search results</a></li>
+                        <li>Profile</li>
+                    </ul>
+                </div>
+            </div>
   </div>
+
 </template>
 
 <style>

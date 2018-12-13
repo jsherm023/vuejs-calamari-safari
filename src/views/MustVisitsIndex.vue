@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="inner-page-hero bg-image" data-image-src="https://choolaah.com/wp-content/uploads/2018/05/our-food-banner.jpg">
+    <div class="inner-page-hero bg-image" data-image-src="https://www.africansafarihome.com/wp-content/uploads/2017/04/African-Safari-Costs.jpg">
       <div class="container"> 
       </div>
                 <!-- end:Container -->

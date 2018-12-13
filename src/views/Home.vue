@@ -3,7 +3,7 @@
     <section class="hero bg-image" data-image-src="https://media-cdn.tripadvisor.com/media/photo-s/0e/7e/11/fe/our-beautiful-calamari.jpg">
             <div class="hero-inner">
                 <div class="container text-center hero-text font-white">
-                    <h1>Lets start your safari! </h1>
+                    <h1>Welcome to Calamari Safari! </h1>
                     <h5 class="font-white space-xs">Find fun food spots by cuisine, city or zip code</h5>
                     <div class="banner-form">
                         <form class="form-inline">

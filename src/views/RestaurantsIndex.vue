@@ -118,7 +118,8 @@
                                             <div class="right-review">
                                                 
                                                 <a v-bind:href="restaurant.url" class="btn theme-btn-dash">View on Zomato</a> <a v-bind:href="restaurant.menu_url" class="btn theme-btn-dash">View Menu</a>
-                                                <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn theme-btn-dash">View Restaurant</a> </div>
+                                                <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn theme-btn-dash">View Restaurant</a> 
+                                              </div>
                                         </div>
                                         <!-- end:right info -->
                                     </div>

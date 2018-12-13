@@ -1,5 +1,10 @@
 <template>
   <div class="login">
+    <div class="inner-page-hero bg-image" data-image-src="https://www.africansafarihome.com/wp-content/uploads/2017/04/African-Safari-Costs.jpg">
+  <div class="container"> 
+  </div>
+                <!-- end:Container -->
+    </div>
     <div class="container">
       <form v-on:submit.prevent="submit()">
         <h1>Login</h1>
