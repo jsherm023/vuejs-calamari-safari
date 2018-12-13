@@ -14,9 +14,18 @@
                                         <h6>Choose Cusine</h6> <i class="fa fa-cutlery pull-right"></i> 
                                       </div>
                                     <div class="input-group">
-                                        <input type="text" class="form-control search-field" placeholder="Search your favorite food"> <span class="input-group-btn"> 
+                                        <input v-model="nameFilter" list="names" placeholder="Search your favorite food">
+                                        <datalist id="names"> 
+                                        <span v-for="restaurant in restaurants"> 
+                                          <option>{{ restaurant.city }}</option>
+                                          <option>{{ restaurant.postal_code }}</option>
+                                          <option>{{ restaurant.name }}</option>
+                                          <option>{{ restaurant.cuisine }}</option>
                                  <button class="btn btn-secondary search-btn" type="button"><i class="fa fa-search"></i></button> 
-                                 </span> </div>
+                                 </span>
+                               </datalist>
+
+                                  </div>
                                     <form>
                                         <ul>
                                             <li>
@@ -134,16 +143,7 @@
                 </div>
       </section>
     <h1>{{ message }}</h1>
-      Search Your Destination: <input v-model="nameFilter" list="names">
-      <datalist id="names">
-        <span v-for="restaurant in restaurants">
-          <option>{{ restaurant.city }}</option>
-          <option>{{ restaurant.state }}</option>
-          <option>{{ restaurant.postal_code }}</option>
-          <option>{{ restaurant.name }}</option>
-          <option>{{ restaurant.cuisine }}</option>
-        </span>
-      </datalist>
+     
       <div>
         <button @click="setSortAttribute('city')">Sort by city</button>
         <button @click="setSortAttribute('state')">Sort by state</button>
