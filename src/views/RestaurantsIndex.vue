@@ -30,23 +30,43 @@
                   <ul>
                     <li>
                       <label class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Barbecuing and Grilling</span> </label>
+                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Italian</span> </label>
                       </li>
                       <li>
                         <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Appetizers</span> </label>
+                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">American</span> </label>
                         </li>
                         <li>
                           <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Soup and salads</span> </label>
+                            <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Asian</span> </label>
                           </li>
                           <li>
                             <label class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Seafood</span> </label>
+                              <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Mexican</span> </label>
                             </li>
                             <li>
                               <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Beverages</span> </label>
+                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Seafood</span> </label>
+                              </li>
+                               <li>
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Pizza</span> </label>
+                              </li>
+                               <li>
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Mediterranean</span> </label>
+                              </li>
+                               <li>
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Cafe</span> </label>
+                              </li>
+                               <li>
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Southern</span> </label>
+                              </li>
+                               <li>
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Bakery</span> </label>
                               </li>
                             </ul>
                           </form>
