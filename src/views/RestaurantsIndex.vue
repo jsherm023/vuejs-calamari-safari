@@ -126,9 +126,11 @@
                         <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
                           <div class="right-content bg-white">
                             <div class="right-review">
+                              <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn btn-info">View Restaurant</a>
                               
-                              <a v-bind:href="restaurant.url" class="btn theme-btn-dash">View on Zomato</a> <a v-bind:href="restaurant.menu_url" class="btn theme-btn-dash">View Menu</a>
-                              <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn theme-btn-dash">View Restaurant</a> 
+                              <a v-bind:href="restaurant.url" class="btn btn-danger">View on Zomato</a>                          
+                              <a v-bind:href="restaurant.menu_url" class="btn btn-success">View Menu</a>
+                               
                             </div>
                           </div>
                           <!-- end:right info -->
@@ -167,12 +169,13 @@
               restaurants: [],
               currentRestaurant: {name: ""},
               errors: [],
-              nameFilter: '',
+              nameFilter: this.$route.query.name,
               sortAttribute: 'name', 
               sortAscending: 1
             };
           },
           created: function() {
+            console.log(this.$route.query.name) // outputs 'yay'
             axios.get('http://localhost:3000/api/restaurants').then(function(response) {
               console.log(response.data);
               this.restaurants = response.data;

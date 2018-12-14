@@ -10,9 +10,18 @@
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                             <div claas="form-group">
-                                <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="I would like to eat...."> </div>
+                                <input v-model="nameFilter" list="names" placeholder="Search your favorite food"> </div>
+                                <datalist id="names"> 
+                                    <span v-for="restaurant in restaurants"> 
+                                      <option>{{ restaurant.city }}</option>
+                                      <option>{{ restaurant.postal_code }}</option>
+                                      <option>{{ restaurant.name }}</option>
+                                      <option>{{ restaurant.cuisine }}</option>
+                                      <button class="btn btn-secondary search-btn" type="button"><i class="fa fa-search"></i></button> 
+                                    </span>
+                                  </datalist>
                             </div>
-                            <button onclick="location.href='/#/restaurants'" type="button" class="btn theme-btn btn-lg">Search</button>
+                             <a class="btn btn-danger" v-bind:href="'/#/restaurants?name='+ nameFilter">Search</a>
                         </form>
                     </div>
                     <div class="steps">
