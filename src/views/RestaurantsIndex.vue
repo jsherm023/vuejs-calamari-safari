@@ -30,43 +30,43 @@
                   <ul>
                     <li>
                       <label class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Italian</span> </label>
+                        <input type="checkbox" class="custom-control-input" @click="setCuisine('italian')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Italian</span> </label>
                       </li>
                       <li>
                         <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">American</span> </label>
+                          <input type="checkbox" class="custom-control-input" @click="setCuisine('American')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">American</span> </label>
                         </li>
                         <li>
                           <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Asian</span> </label>
+                            <input type="checkbox" class="custom-control-input" @click="setCuisine('Asian')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Asian</span> </label>
                           </li>
                           <li>
                             <label class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Mexican</span> </label>
+                              <input type="checkbox" class="custom-control-input" @click="setCuisine('Mexican')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Mexican</span> </label>
                             </li>
                             <li>
                               <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Seafood</span> </label>
+                                <input type="checkbox" class="custom-control-input" @click="setCuisine('Seafood')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Seafood</span> </label>
                               </li>
                                <li>
                               <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Pizza</span> </label>
+                                <input type="checkbox" class="custom-control-input" @click="setCuisine('Pizza')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Pizza</span> </label>
                               </li>
                                <li>
                               <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Mediterranean</span> </label>
+                                <input type="checkbox" class="custom-control-input" @click="setCuisine('Mediterranean')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Mediterranean</span> </label>
                               </li>
                                <li>
                               <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Cafe</span> </label>
+                                <input type="checkbox" class="custom-control-input" @click="setCuisine('Cafe')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Cafe</span> </label>
                               </li>
                                <li>
                               <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Southern</span> </label>
+                                <input type="checkbox" class="custom-control-input" @click="setCuisine('Southern')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Southern</span> </label>
                               </li>
                                <li>
                               <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Bakery</span> </label>
+                                <input type="checkbox" class="custom-control-input" @click="setCuisine('Bakery')"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Bakery</span> </label>
                               </li>
                             </ul>
                           </form>
@@ -90,38 +90,7 @@
                         </div>
                       </div>
                       <!-- end:Pricing widget -->
-                      <div class="widget clearfix">
-                        <!-- /widget heading -->
-                        <div class="widget-heading">
-                          <h3 class="widget-title text-dark">
-                           Popular tags
-                         </h3>
-                         <div class="clearfix"></div>
-                       </div>
-                       <div class="widget-body">
-                        <ul class="tags">
-                          <li> <a href="#" class="tag">
-                            Pizza
-                          </a> </li>
-                          <li> <a href="#" class="tag">
-                            Sendwich
-                          </a> </li>
-                          <li> <a href="#" class="tag">
-                            Sendwich
-                          </a> </li>
-                          <li> <a href="#" class="tag">
-                            Fish 
-                          </a> </li>
-                          <li> <a href="#" class="tag">
-                            Desert
-                          </a> </li>
-                          <li> <a href="#" class="tag">
-                            Salad
-                          </a> </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- end:Widget -->
+                      
                   </div>
                   <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">
                     <div class="bg-gray restaurant-entry"v-for="restaurant in orderBy(filterBy(restaurants, nameFilter), sortAttribute, sortAscending)">
@@ -165,8 +134,8 @@
                 </div>
               </div>
             </section>
-            <h1>{{ message }}</h1>
-            
+<!--             <h1>{{ message }}</h1>
+ -->            
             <div>
               <button @click="setSortAttribute('city')">Sort by city</button>
               <button @click="setSortAttribute('state')">Sort by state</button>
@@ -195,6 +164,7 @@
             };
           },
           created: function() {
+            console.log('run function');
             console.log(this.$route.query.name) // outputs 'yay'
             axios.get('http://localhost:3000/api/restaurants').then(function(response) {
               console.log(response.data);
@@ -203,11 +173,16 @@
           },
           methods: {
             setSortAttribute: function(inputAttribute) {
+              console.log('run set sort attibute function');
               if (this.sortAttribute === inputAttribute) {
-                this.sortAscending *= -1;
+               this.sortAscending *= -1; 
               } else {
                 this.sortAttribute = inputAttribute;
-              }
+              }   
+            },
+            setCuisine: function(inputCuisine) {
+              console.log('run setCuisine function');
+              this.nameFilter = inputCuisine;
             }
           },
           
