@@ -84,7 +84,7 @@
                          <div class="clearfix"></div>
                        </div>
                        <div class="widget-body">
-                        <div class="range-slider m-b-10"> <span id="ex2CurrentSliderValLabel"> Filter by price:<span id="ex2SliderVal"><strong>35</strong></span>€</span>
+                        <div class="range-slider m-b-10"> <span id="ex2CurrentSliderValLabel"> Filter by price:<span id="ex2SliderVal"><strong>5</strong></span>$</span>
                           <br>
                           <input id="ex2" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="35" /> </div>
                         </div>
@@ -116,8 +116,9 @@
                           <div class="right-content bg-white">
                             <div class="right-review">
                               <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn btn-info">View Restaurant</a>
-                              
-                              <a v-bind:href="restaurant.url" class="btn btn-danger">View on Zomato</a>                          
+                              <div>
+                                <a v-bind:href="restaurant.url" class="btn btn-danger">View on Zomato</a> 
+                              </div>                       
                               <a v-bind:href="restaurant.menu_url" class="btn btn-success">View Menu</a>
                                
                             </div>

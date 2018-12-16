@@ -26,10 +26,6 @@
                   </datalist>
 
                 </div>
-                  <div class="input-group">
-                    <input type="text" class="form-control search-field" placeholder="Search your favorite food"> <span class="input-group-btn"> 
-                     <button class="btn btn-secondary search-btn" type="button"><i class="fa fa-search"></i></button> 
-                   </span> </div>
                    <form>
                   <ul>
                     <li>
@@ -117,9 +113,11 @@
                           <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
                             <div class="right-content bg-white">
                               <div class="right-review">
-                               <a v-bind:href="rating.restaurant.menu_url" class="btn btn-success">View Menu</a> 
-                                <a v-bind:href="rating.restaurant.url" class="btn btn-success">View on Zomato</a> 
-                               <a v-on:click="removeMustVisit(rating)" class="btn btn-danger">Remove Must Visit</a> 
+                                <div>
+                                  <a v-bind:href="rating.restaurant.menu_url" class="btn btn-success">View Menu</a> 
+                                </div>
+                                  <a v-bind:href="rating.restaurant.url" class="btn btn-success">View on Zomato</a> 
+                                 <a v-on:click="removeMustVisit(rating)" class="btn btn-danger">Remove Must Visit</a> 
                              </div>
                            </div>
                            <!-- end:right info -->
@@ -178,7 +176,11 @@
             },
             setCuisine: function(inputCuisine) {
               console.log('run setCuisine function');
+              if (this.nameFilter === inputCuisine) {
+                this.nameFilter = "";
+              } else {
               this.nameFilter = inputCuisine;
+              }
             }
           },
           computed: {}

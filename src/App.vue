@@ -1,4 +1,5 @@
 <template>
+    <div id="app">
   <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
     <header id="header" class="header-scroll top-header headrom">
         <!-- .navbar -->
@@ -21,9 +22,10 @@
                 </div>
             </nav>
             <!-- /.navbar -->
-        </header>
+    </header>
         
         <router-view/>
+        
         <footer class="footer">
             <div class="container">
                 <!-- top footer statrs -->
@@ -64,6 +66,7 @@
                     <!-- bottom footer ends -->
                 </div>
         </footer>
+    </div>
     </div>
     </template>
 
