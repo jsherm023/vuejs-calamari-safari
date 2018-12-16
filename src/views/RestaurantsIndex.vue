@@ -86,7 +86,7 @@
                        <div class="widget-body">
                         <div class="range-slider m-b-10"> <span id="ex2CurrentSliderValLabel"> Filter by price:<span id="ex2SliderVal"><strong>35</strong></span>€</span>
                           <br>
-                          <input id="ex2" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="35" /> </div>
+                          <input id="ex2" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="35" /> </div>
                         </div>
                       </div>
                       <!-- end:Pricing widget -->
@@ -160,7 +160,9 @@
               errors: [],
               nameFilter: this.$route.query.name,
               sortAttribute: 'name', 
-              sortAscending: 1
+              sortAscending: 1,
+              restaurantFilters: [],
+              filteredRestaurants: []
             };
           },
           created: function() {
@@ -182,8 +184,18 @@
             },
             setCuisine: function(inputCuisine) {
               console.log('run setCuisine function');
+              if (this.nameFilter === inputCuisine) {
+                this.nameFilter = "";
+              } else {
               this.nameFilter = inputCuisine;
+              }
+              // this.nameFilter = inputCuisine;
+
             }
+            // setCuisine: function(inputCuisine) {
+            //   console.log('run setcuisine function');
+            //   this.restaurantFilters.push(inputCuisine);
+            // }
           },
           
           computed: {}
