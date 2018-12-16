@@ -10,7 +10,7 @@
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                             <div claas="form-group">
-                                <input v-model="nameFilter" list="names" placeholder="Search your favorite food"> </div>
+                                <input v-model="nameFilter" list="names" placeholder="Start your Safari"> </div>
                                 <datalist id="names"> 
                                     <span v-for="restaurant in restaurants"> 
                                       <option>{{ restaurant.city }}</option>

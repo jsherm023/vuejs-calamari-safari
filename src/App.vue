@@ -63,8 +63,8 @@
                     </div>
                     <!-- bottom footer ends -->
                 </div>
-            </footer>
-        </div>
+        </footer>
+    </div>
     </template>
 
     <style>

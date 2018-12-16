@@ -11,10 +11,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
               <div class="pull-left right-text white-txt">
-                <h6><a href="#">{{ restaurant.name }}</a></h6> 
-                <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a>
-                <p href="#">{{ restaurant.city}}</p>
-                      
+                <h6><a href="#">{{ restaurant.name }}</a></h6>                
+                <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a>                 
+                <p href="#">{{ restaurant.city}}</p>                   
                 <p>{{ restaurant.cuisine }}</p>
                 <ul class="nav nav-inline">
                   <li class="nav-item"> 
@@ -33,6 +32,7 @@
           <li><a href="#/" class="active">Home</a></li>
           <li><a href="/#/restaurants">Search results</a></li>
           <li>Profile</li>
+        
         </ul>
       </div>
     </div>
