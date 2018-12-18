@@ -25,8 +25,7 @@
                 <div>
                   <a v-bind:href="restaurant.menu_url" class="btn btn-small btn-green">View Menu</a>
                   </div> 
-                <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a>               
-                
+                <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a> 
               </div>
             </div>
           </div>
