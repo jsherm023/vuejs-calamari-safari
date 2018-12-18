@@ -12,7 +12,7 @@
                         <li class="nav-item"> <a class="nav-link active" href="#/">Home <span class="sr-only">(current)</span></a> </li>
                           <li class="nav-item"> <a class="nav-link active" href="/#/ratings">Must Visits <span class="sr-only">(current)</span></a> </li>
                             <li class="nav-item"> <a class="nav-link active" href="/#/restaurants">Search Restaurants <span class="sr-only">(current)</span></a> </li>
-                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Authorization</a>
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
                             <div class="dropdown-menu"> <a class="dropdown-item" href="/#/signup">Signup</a> <a class="dropdown-item" href="/#/login">Login</a> <a class="dropdown-item" href="/#/logout">Logout</a> 
                                
                                 </div>
