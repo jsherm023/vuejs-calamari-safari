@@ -1,6 +1,6 @@
 <template>
   <div class="signup">
-    <div class="inner-page-hero bg-image" data-image-src="https://www.africansafarihome.com/wp-content/uploads/2017/04/African-Safari-Costs.jpg">
+    <div class="inner-page-hero bg-image" data-image-src="https://png.pngtree.com/thumb_back/fw800/back_pic/05/06/60/94596f0ca767149.jpg">
       <div class="container"> 
       </div>
       <!-- end:Container -->

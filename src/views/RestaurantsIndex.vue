@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="inner-page-hero bg-image" data-image-src="https://choolaah.com/wp-content/uploads/2018/05/our-food-banner.jpg">
+    <div class="inner-page-hero bg-image" data-image-src="https://png.pngtree.com/thumb_back/fw800/back_pic/05/06/60/94596f0ca767149.jpg">
       <div class="container"> </div>
       <!-- end:Container -->
     </div>
@@ -84,7 +84,7 @@
                       <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left" >
                           <div class="entry-logo">
-                            <a class="img-fluid" href="#"><img v-bind:src="restaurant.image_url" alt="Food logo"></a>
+                            <a class="img-fluid" href="#"><img v-bind:src="restaurant.image_url" alt="Image Coming Soon!"></a>
                           </div>
                           <!-- end:Logo -->
                           <div class="entry-dscr">
@@ -121,14 +121,7 @@
                   </div>
                 </div>
               </div>
-            </section>
-<!--             <h1>{{ message }}</h1>
- -->            
-            <div>
-              <button @click="setSortAttribute('city')">Sort by city</button>
-              <button @click="setSortAttribute('state')">Sort by state</button>
-              <button @click="setSortAttribute('price')">Sort by price</button>
-            </div>
+            </section>           
           </div>
         </template>
 

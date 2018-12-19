@@ -32,28 +32,14 @@
                 <div class="row top-footer">
                     <div class="col-xs-12 col-sm-3 footer-logo-block color-black">
                         <a href="#"> <img src="https://t4.ftcdn.net/jpg/01/23/88/89/240_F_123888953_gYo6tlCP7OjNRYIN1WbbmHUkaDE9oxyK.jpg" alt="Footer logo"> </a>  </div>
-                        <div class="col-xs-12 col-sm-2 about color-black">
-                            <h5>About Us</h5>
+                        <div class="col-xs-12 col-sm-2 how-it-works-links color-black">
+                            <h6>How it Works</h6>
                             <ul>
-                                <li><a href="#">About us</a> </li>
+                                <li><a href="#/">Enter your location</a> </li>
+                                <li><a href="/#/restaurants">Choose restaurant</a> </li>
+                                <li><a href="/#/ratings">Mark as must visit</a> </li>
                             </ul>
                         </div>
-                        <div class="col-xs-12 col-sm-2 how-it-works-links color-gray">
-                            <h5>How it Works</h5>
-                            <ul>
-                                <li><a href="#">Enter your location</a> </li>
-                                <li><a href="#">Choose restaurant</a> </li>
-                                <li><a href="#">Mark as must visit</a> </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-2 pages color-gray">
-                            <h5>Pages</h5>
-                            <ul>
-                                <li><a href="#">Search results page</a> </li>
-                                <li><a href="#">User Sing Up Page</a> </li>
-                            </ul>
-                        </div>
-
                     </div>
                     <!-- top footer ends -->
                     <!-- bottom footer statrs -->

@@ -74,9 +74,9 @@
         var params = {
           must_visit: this.newRating.must_visit,
           restaurant_id: this.$route.params.id    
-        }
+        };
         console.log('add as must visit'); 
-        this.newRating.must_visit    
+        this.newRating.must_visit;    
         
         axios.post('http://localhost:3000/api/ratings', params).then(function(response) {
           console.log(response.data);
@@ -85,7 +85,7 @@
           console.log('in the .catch function');
           console.log(errors.response);
           this.errors = errors.response.data.errors;
-        }.bind(this))
+        }.bind(this));
         console.log('add must visit');
       }
     },
