@@ -20,12 +20,12 @@
                   </li>    
                 </ul>
                 <div>     
-                <a v-bind:href="restaurant.url" class="btn btn-small btn-green">View on Zomato</a> 
+                <a v-bind:href="restaurant.url" class="btn btn-small btn-info">View on Zomato</a> 
               </div>
                 <div>
-                  <a v-bind:href="restaurant.menu_url" class="btn btn-small btn-green">View Menu</a>
+                  <a v-bind:href="restaurant.menu_url" class="btn btn-small btn-info">View Menu</a>
                   </div> 
-                <a class="btn btn-small btn-green" v-on:click="addMustVisit()">Mark as Must Visit</a> 
+                <a class="btn btn-small btn-info" v-on:click="addMustVisit()">Mark as Must Visit</a> 
               </div>
             </div>
           </div>

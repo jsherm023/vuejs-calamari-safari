@@ -102,11 +102,11 @@
                         <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
                           <div class="right-content bg-white">
                             <div class="right-review">
-                              <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn btn-info">View Restaurant</a>
+                              <a v-bind:href="'/#/restaurants/' + restaurant.id" class="btn btn-success">View Restaurant</a>
                               <div>
-                                <a v-bind:href="restaurant.url" class="btn btn-danger">View on Zomato</a> 
+                                <a v-bind:href="restaurant.url" class="btn btn-info">View on Zomato</a> 
                               </div>                       
-                              <a v-bind:href="restaurant.menu_url" class="btn btn-success">View Menu</a>
+                              <a v-bind:href="restaurant.menu_url" class="btn btn-danger">View Menu</a>
                                
                             </div>
                           </div>
@@ -152,13 +152,13 @@
             axios.get('http://localhost:3000/api/restaurants').then(function(response) {
               console.log(response.data);
               this.restaurants = response.data;
-            }.bind(this))
+            }.bind(this));
           },
           methods: {
             setSortAttribute: function(inputAttribute) {
               console.log('run set sort attibute function');
               if (this.sortAttribute === inputAttribute) {
-               this.sortAscending *= -1; 
+                this.sortAscending *= -1; 
               } else {
                 this.sortAttribute = inputAttribute;
               }   
@@ -168,7 +168,7 @@
               if (this.nameFilter === inputCuisine) {
                 this.nameFilter = "";
               } else {
-              this.nameFilter = inputCuisine;
+                this.nameFilter = inputCuisine;
               }
               // this.nameFilter = inputCuisine;
 

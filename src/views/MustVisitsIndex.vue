@@ -99,10 +99,11 @@
                           <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
                             <div class="right-content bg-white">
                               <div class="right-review">
+                                <a v-bind:href="rating.restaurant.url" class="btn btn-success">View on Zomato</a> 
                                 <div>
-                                  <a v-bind:href="rating.restaurant.menu_url" class="btn btn-success">View Menu</a> 
+                                  <a v-bind:href="rating.restaurant.menu_url" class="btn btn-info">View Menu</a> 
                                 </div>
-                                  <a v-bind:href="rating.restaurant.url" class="btn btn-success">View on Zomato</a> 
+                                  
                                  <a v-on:click="removeMustVisit(rating)" class="btn btn-danger">Remove Must Visit</a> 
                              </div>
                            </div>
