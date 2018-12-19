@@ -75,20 +75,7 @@
                         <!-- end:Sidebar nav -->
                         
                       </div>
-                      <div class="widget clearfix">
-                        <!-- /widget heading -->
-                        <div class="widget-heading">
-                          <h3 class="widget-title text-dark">
-                           Price range
-                         </h3>
-                         <div class="clearfix"></div>
-                       </div>
-                       <div class="widget-body">
-                        <div class="range-slider m-b-10"> <span id="ex2CurrentSliderValLabel"> Filter by price:<span id="ex2SliderVal"><strong>5</strong></span>$</span>
-                          <br>
-                          <input id="ex2" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="35" /> </div>
-                        </div>
-                      </div>
+                      
                       <!-- end:Pricing widget -->
                       
                   </div>
